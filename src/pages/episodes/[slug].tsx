@@ -1,13 +1,13 @@
 import { format, parseISO } from 'date-fns';
-import ptBR from 'date-fns/locale/pt-BR'
-import { GetStaticPaths, GetStaticProps } from 'next';
-import Link from 'next/link';
+import ptBR from 'date-fns/locale/pt-BR';
 import Image from 'next/image';
+import Link from 'next/link';
+import { GetStaticPaths, GetStaticProps } from 'next';
 
 import { api } from '../../services/api';
 import { convertDurationToTimeString } from '../../utils/convertDurationToTimeString';
 
-import styles from './episode.module.scss'
+import styles from './episode.module.scss';
 
 type Episode = {
     id: string;
@@ -60,16 +60,28 @@ export default function Episode( { episode }: EpisodeProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    return {
-        paths: [
-            { 
-                params: { 
-                    slug: 'a-importancia-da-contribuicao-em-open-source'
-                }  
+    const { data } = await api.get('episodes', {
+        params: {
+            _limit: 12,
+            _sort: 'published_at',
+            _order: 'desc'
+        }
+    })
+
+    const paths = data.map(episode => {
+        return {
+            params: {
+                slug: episode.id
             }
-        ],
+        }
+    })
+
+    return {
+        paths,
+        // quando a pessoa clicar no link, ela vai ser passada somente quando os conteudos forem carregados
         fallback: 'blocking'
     }
+    // increment static generation
 }
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
