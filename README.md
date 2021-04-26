@@ -23,7 +23,6 @@ Você pode ouvir todos os podcastr na Rocketseat através do player, com modo al
 * [Node.js](https://nodejs.org/en/)
 * [JSON](https://www.json.org/json-en.html)
 * [SASS/SCSS](https://sass-lang.com/documentation/syntax)
-* [yarn](https://yarnpkg.com/)
 
 
 ## Iniciando o Projeto
