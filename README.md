@@ -23,7 +23,6 @@ Você pode ouvir todos os podcastr na Rocketseat através do player, com modo al
 * [Node.js](https://nodejs.org/en/)
 * [JSON](https://www.json.org/json-en.html)
 * [SASS/SCSS](https://sass-lang.com/documentation/syntax)
-* [yarn](https://yarnpkg.com/)
 
 
 ## Iniciando o Projeto
@@ -49,4 +48,4 @@ Instale o npm no seu terminal
 
 ## Referências
 
-Projeto idealizado e desenvolvido pOR: https://github.com/Rocketseat
+Projeto idealizado e desenvolvido por: https://github.com/Rocketseat
