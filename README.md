@@ -35,7 +35,7 @@ Instale o npm no seu terminal
   npm install npm@latest -g
   ```
 
-### Instação
+### Instalação
 
 1. Execute ``` npm install ``` ou ``` yarn install ``` para instalar as dependências necessárias.
    ```sh
