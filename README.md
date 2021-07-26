@@ -48,4 +48,4 @@ Instale o npm no seu terminal
 
 ## Referências
 
-Projeto idealizado e desenvolvido por: https://github.com/Rocketseat
+Projeto idealizado por: https://github.com/Rocketseat
